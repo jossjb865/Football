@@ -6,14 +6,33 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
-      "channel": "development"
+      "ios": {
+        "resourceClass": "default"
+      },
+      "android": {
+        "resourceClass": "default",
+        "buildType": "apk"
+      }
     },
     "preview": {
       "distribution": "internal",
-      "channel": "preview"
+      "ios": {
+        "resourceClass": "default"
+      },
+      "android": {
+        "resourceClass": "default",
+        "buildType": "apk"
+      }
     },
     "production": {
-      "channel": "production"
+      "distribution": "store",
+      "ios": {
+        "resourceClass": "default"
+      },
+      "android": {
+        "resourceClass": "default",
+        "buildType": "aab"
+      }
     }
   },
   "submit": {

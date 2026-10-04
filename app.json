@@ -1,28 +1,23 @@
 {
-  "name": "Football",
-  "slug": "football",
-  "version": "1.0.0",
-  "orientation": "portrait",
-  "userInterfaceStyle": "light",
-  "assetBundlePatterns": [
-    "**/*"
-  ],
-  "ios": {
-    "supportsTablet": true,
-    "bundleIdentifier": "com.jossjb865.football"
-  },
-  "android": {
-    "package": "com.jossjb865.football",
-    "adaptiveIcon": {
-      "backgroundColor": "#FFFFFF"
-    }
-  },
-  "web": {
-    "bundler": "metro"
-  },
-  "extra": {
-    "eas": {
-      "projectId": "YOUR_EAS_PROJECT_ID"
-    }
+  "expo": {
+    "name": "Football",
+    "slug": "football",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.football.app"
+    },
+    "android": {
+      "package": "com.football.app",
+      "adaptiveIcon": {
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "plugins": [
+      ["expo-build-properties", {}]
+    ]
   }
 }
