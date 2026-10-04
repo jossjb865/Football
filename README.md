@@ -1,270 +1,481 @@
-# ⚽ Football App
-
-[![Expo](https://img.shields.io/badge/Expo-51.0.0-000.svg)](https://expo.dev)
-[![React Native](https://img.shields.io/badge/React%20Native-0.74-61dafb.svg)](https://reactnative.dev)
-[![License](https://img.shields.io/github/license/jossjb865/Football)](LICENSE)
-[![GitHub Stars](https://img.shields.io/github/stars/jossjb865/Football?style=social)](https://github.com/jossjb865/Football)
-
-A modern, minimalist football (soccer) statistics and analytics app built with React Native and Expo. Designed for iOS, Android, and Web with a clean, intuitive interface.
-
-## ✨ Features
-
-- 📊 **Real-time Statistics** - Live match data, scores, and player stats
-- 🏆 **League Standings** - Current season rankings and points
-- 🥅 **Top Scorers** - Leaderboard of goal-scoring leaders
-- 🎯 **Assists Tracking** - Monitor assists leaders
-- 📱 **Multi-platform** - iOS, Android, and Web support
-- 🎨 **Minimalist Design** - Clean, modern UI with focus on readability
-- ⚡ **Fast & Responsive** - Optimized performance across all platforms
-
-## 🚀 Quick Start
-
-### Prerequisites
-
-- Node.js >= 18.x
-- npm or yarn
-- Expo CLI (optional, included via npm)
-
-### Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/jossjb865/Football.git
-cd Football
-
-# Install dependencies
-npm install
-
-# Create environment file
-cp .env.example .env
-```
-
-### Development
-
-```bash
-# Start Expo development server
-npm start
-
-# For iOS (macOS only)
-npm run ios
-
-# For Android
-npm run android
-
-# For Web
-npm run web
-```
-
-## 📱 Platform-Specific
-
-### iOS
-
-```bash
-expo run:ios
-# or
-npm run ios
-```
-
-### Android
-
-```bash
-expo run:android
-# or
-npm run android
-```
-
-### Web
-
-```bash
-expo start --web
-# or
-npm run web
-```
-
-## 🏗️ Building for Production
-
-### Using EAS Build
-
-```bash
-# Install EAS CLI
-npm install -g eas-cli
-
-# Login to Expo/EAS
-npx eas login
-
-# Configure EAS for your project
-npx eas build:configure
-
-# Build for all platforms
-npm run eas-build
-
-# Or build for specific platform
-npm run eas-build-android
-npm run eas-build-ios
-```
-
-#### Build Profiles
-
-- **development** - For testing with development client
-- **preview** - For staging/preview builds
-- **production** - For App Store and Google Play distribution
-
-## 📁 Project Structure
-
-```
-Football/
-├── App.js              # Main app component with tab navigation
-├── index.js            # App entry point
-├── app.json            # Expo configuration
-├── eas.json            # EAS build configuration
-├── babel.config.js     # Babel configuration
-├── package.json        # Dependencies and scripts
-├── .env.example        # Environment variables template
-├── .gitignore          # Git ignore rules
-├── EAS_SETUP.md        # EAS build documentation
-└── README.md           # This file
-```
-
-## 🎨 Design System
-
-Minimalist dark theme with carefully selected colors:
-
-- **Background**: `#0f172a` (Slate 950)
-- **Surface**: `#1e293b` (Slate 800)
-- **Primary**: `#3b82f6` (Blue 500)
-- **Accent**: `#ec4899` (Pink 500)
-- **Text**: `#f1f5f9` (Slate 100)
-- **Secondary Text**: `#cbd5e1` (Slate 300)
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create a `.env` file based on `.env.example`:
-
-```bash
-EXPO_PUBLIC_API_URL=https://api.example.com
-EXPO_PUBLIC_APP_ENV=development
-EXPO_PUBLIC_LEAGUE_ID=1
-EXPO_PUBLIC_SEASON=2024
-```
-
-Access in your app:
-
-```js
-const apiUrl = process.env.EXPO_PUBLIC_API_URL;
-```
-
-## 📦 Scripts
-
-```bash
-# Development
-npm start              # Start Expo dev server
-npm run ios            # Run on iOS simulator
-npm run android        # Run on Android emulator
-npm run web            # Run on web
-
-# Production & Building
-npm run eas-build      # Build for iOS and Android
-npm run eas-build-ios  # Build for iOS only
-npm run eas-build-android  # Build for Android only
-```
-
-## 🧪 Testing
-
-To run the app in Expo Go (development):
-
-```bash
-npm start
-
-# Then scan QR code with Expo Go app
-```
-
-## 🌐 Deployment
-
-### Ideavo Integration
-
-This project is ready for deployment via [Ideavo.ai](https://ideavo.ai):
-
-1. Connect your GitHub repository
-2. Ideavo will auto-detect the Expo configuration
-3. Configure build settings and deploy
-4. Access your app via Ideavo's hosting
-
-### App Store & Google Play
-
-```bash
-# Build production binaries
-npm run eas-build -- --profile production
-
-# Submit to stores (requires additional setup)
-eas submit --platform ios
-eas submit --platform android
-```
-
-## 🛠️ Troubleshooting
-
-### Port Already in Use
-
-```bash
-expo start --clear
-```
-
-### Module Not Found
-
-```bash
-rm -rf node_modules package-lock.json
-npm install
-```
-
-### Build Issues
-
-See [EAS_SETUP.md](EAS_SETUP.md) for detailed EAS troubleshooting.
-
-## 📚 Dependencies
-
-- **expo** ~51.0.0 - Framework for building native apps
-- **react** 18.2.0 - UI library
-- **react-native** 0.74.5 - Native mobile development
-- **expo-status-bar** ~1.12.1 - Status bar API
-
-## 📝 Development Guidelines
-
-1. Use functional components with React hooks
-2. Keep components focused and reusable
-3. Follow minimalist design principles
-4. Test on multiple platforms (iOS, Android, Web)
-5. Keep bundle size optimized
-
-## 🤝 Contributing
-
-Contributions are welcome! Please:
-
-1. Fork the repository
-2. Create a feature branch: `git checkout -b feat/amazing-feature`
-3. Commit changes: `git commit -m 'Add amazing feature'`
-4. Push to branch: `git push origin feat/amazing-feature`
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see [LICENSE](LICENSE) file for details.
-
-## 📞 Support
-
-- 📧 Email: support@example.com
-- 🐛 Issues: [GitHub Issues](https://github.com/jossjb865/Football/issues)
-- 💬 Discussions: [GitHub Discussions](https://github.com/jossjb865/Football/discussions)
-
-## 🔗 Resources
-
-- [Expo Documentation](https://docs.expo.dev)
-- [React Native Docs](https://reactnative.dev)
-- [EAS Build Guide](https://docs.expo.dev/build/setup/)
-- [Ideavo.ai](https://ideavo.ai)
-
----
-
-**Built with ❤️ using Expo and React Native**
-
-⭐ If you find this project useful, please consider giving it a star!
+import React, { useMemo, useState } from 'react';
+import { StatusBar } from 'expo-status-bar';
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from 'react-native';
+
+const tabs = [
+  { key: 'overview', label: 'Overview', icon: '🏠' },
+  { key: 'stats', label: 'Stats', icon: '📊' },
+  { key: 'teams', label: 'Teams', icon: '👥' },
+];
+
+const seasonSummary = [
+  { label: 'Matches', value: '240' },
+  { label: 'Goals', value: '1.2K' },
+  { label: 'Avg. Goals', value: '2.8' },
+  { label: 'Active', value: 'Live' },
+];
+
+const leaderboard = [
+  { name: 'Cristiano', goals: 42, team: 'Real FC' },
+  { name: 'Lionel', goals: 39, team: 'Inter City' },
+  { name: 'Erling', goals: 38, team: 'Northside' },
+  { name: 'Robert', goals: 35, team: 'Riviera' },
+];
+
+const standings = [
+  { position: 1, team: 'City United', points: 76 },
+  { position: 2, team: 'Manchester X', points: 71 },
+  { position: 3, team: 'Liverpool FC', points: 68 },
+  { position: 4, team: 'Arsenal Pro', points: 64 },
+  { position: 5, team: 'White FC', points: 61 },
+];
+
+const fixtures = [
+  { home: 'City United', away: 'White FC', time: '18:00', day: 'Wed' },
+  { home: 'Arsenal Pro', away: 'Liverpool FC', time: '20:30', day: 'Fri' },
+  { home: 'Riviera', away: 'Inter City', time: '21:00', day: 'Sat' },
+];
+
+export default function App() {
+  const [activeTab, setActiveTab] = useState('overview');
+
+  const tabContent = useMemo(() => {
+    switch (activeTab) {
+      case 'stats':
+        return <StatsTab />;
+      case 'teams':
+        return <TeamsTab />;
+      default:
+        return <OverviewTab />;
+    }
+  }, [activeTab]);
+
+  return (
+    <View style={styles.container}>
+      <StatusBar style="light" backgroundColor="#0b1020" />
+
+      <View style={styles.header}>
+        <Text style={styles.brand}>⚽ FOOTBALL</Text>
+        <TouchableOpacity style={styles.filterButton} activeOpacity={0.8}>
+          <Text style={styles.filterButtonText}>League</Text>
+        </TouchableOpacity>
+      </View>
+
+      <ScrollView style={styles.content} showsVerticalScrollIndicator={false}>
+        <View style={styles.heroCard}>
+          <View style={styles.heroTopRow}>
+            <Text style={styles.kicker}>Season 2024</Text>
+            <Text style={styles.livePill}>LIVE</Text>
+          </View>
+
+          <Text style={styles.heroTitle}>Elite League</Text>
+
+          <View style={styles.matchRow}>
+            <TeamBadge label="City" icon="🔵" />
+            <View style={styles.scoreWrap}>
+              <Text style={styles.score}>2 : 1</Text>
+              <Text style={styles.subtitle}>Final result</Text>
+            </View>
+            <TeamBadge label="White" icon="⚪" />
+          </View>
+
+          <View style={styles.metaRow}>
+            <Text style={styles.metaText}>Stadium: North Arena</Text>
+            <Text style={styles.metaText}>58 min</Text>
+          </View>
+        </View>
+
+        <View style={styles.summaryRow}>
+          {seasonSummary.map((item) => (
+            <View key={item.label} style={styles.summaryCard}>
+              <Text style={styles.summaryLabel}>{item.label}</Text>
+              <Text style={styles.summaryValue}>{item.value}</Text>
+            </View>
+          ))}
+        </View>
+
+        {tabContent}
+      </ScrollView>
+
+      <View style={styles.tabBar}>
+        {tabs.map((tab) => (
+          <TouchableOpacity
+            key={tab.key}
+            style={[styles.tabButton, activeTab === tab.key && styles.tabButtonActive]}
+            onPress={() => setActiveTab(tab.key)}
+            activeOpacity={0.9}
+          >
+            <Text style={styles.tabIcon}>{tab.icon}</Text>
+            <Text style={[styles.tabLabel, activeTab === tab.key && styles.tabLabelActive]}>
+              {tab.label}
+            </Text>
+          </TouchableOpacity>
+        ))}
+      </View>
+    </View>
+  );
+}
+
+function OverviewTab() {
+  return (
+    <View style={styles.section}>
+      <SectionHeader title="Upcoming Fixtures" />
+      {fixtures.map((match, index) => (
+        <View key={`${match.home}-${index}`} style={styles.fixtureCard}>
+          <Text style={styles.fixtureDay}>{match.day}</Text>
+          <View style={styles.fixtureBody}>
+            <Text style={styles.fixtureTeam}>{match.home}</Text>
+            <Text style={styles.fixtureVS}>vs</Text>
+            <Text style={styles.fixtureTeam}>{match.away}</Text>
+          </View>
+          <Text style={styles.fixtureTime}>{match.time}</Text>
+        </View>
+      ))}
+
+      <SectionHeader title="Top Picks" />
+      <View style={styles.picksCard}>
+        <Text style={styles.pickTitle}>Over 2.5 Goals</Text>
+        <Text style={styles.pickMeta}>Confidence 81% • Strong trend</Text>
+      </View>
+    </View>
+  );
+}
+
+function StatsTab() {
+  return (
+    <View style={styles.section}>
+      <SectionHeader title="Top Scorers" />
+      {leaderboard.map((player, index) => (
+        <View key={player.name} style={styles.listRow}>
+          <Text style={styles.rank}>{index + 1}</Text>
+          <View style={styles.nameWrap}>
+            <Text style={styles.listName}>{player.name}</Text>
+            <Text style={styles.listSub}>{player.team}</Text>
+          </View>
+          <Text style={styles.goals}>{player.goals}</Text>
+        </View>
+      ))}
+    </View>
+  );
+}
+
+function TeamsTab() {
+  return (
+    <View style={styles.section}>
+      <SectionHeader title="Standings" />
+      {standings.map((row) => (
+        <View key={row.team} style={styles.listRow}>
+          <Text style={styles.rank}>{row.position}</Text>
+          <View style={styles.nameWrap}>
+            <Text style={styles.listName}>{row.team}</Text>
+          </View>
+          <Text style={styles.goals}>{row.points}</Text>
+        </View>
+      ))}
+    </View>
+  );
+}
+
+function SectionHeader({ title }) {
+  return <Text style={styles.sectionTitle}>{title}</Text>;
+}
+
+function TeamBadge({ label, icon }) {
+  return (
+    <View style={styles.teamBadge}>
+      <Text style={styles.teamIcon}>{icon}</Text>
+      <Text style={styles.teamName}>{label}</Text>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#0b1020',
+  },
+  header: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    paddingHorizontal: 20,
+    paddingTop: 18,
+    paddingBottom: 10,
+    backgroundColor: '#111827',
+    borderBottomWidth: 1,
+    borderBottomColor: '#1f2937',
+  },
+  brand: {
+    color: '#f8fafc',
+    fontSize: 18,
+    fontWeight: '800',
+    letterSpacing: 1.2,
+  },
+  filterButton: {
+    backgroundColor: '#1e293b',
+    borderRadius: 999,
+    paddingHorizontal: 12,
+    paddingVertical: 8,
+    borderWidth: 1,
+    borderColor: '#334155',
+  },
+  filterButtonText: {
+    color: '#dbeafe',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  content: {
+    flex: 1,
+    paddingHorizontal: 18,
+    paddingTop: 18,
+  },
+  heroCard: {
+    backgroundColor: '#111827',
+    borderRadius: 22,
+    padding: 18,
+    borderWidth: 1,
+    borderColor: '#1f2937',
+    shadowColor: '#000',
+    shadowOpacity: 0.2,
+    shadowRadius: 10,
+    shadowOffset: { width: 0, height: 6 },
+    elevation: 8,
+  },
+  heroTopRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    marginBottom: 8,
+  },
+  kicker: {
+    color: '#9ca3af',
+    fontSize: 12,
+    letterSpacing: 0.8,
+    textTransform: 'uppercase',
+  },
+  livePill: {
+    backgroundColor: '#ef4444',
+    color: '#fff',
+    borderRadius: 999,
+    paddingHorizontal: 8,
+    paddingVertical: 4,
+    fontSize: 10,
+    fontWeight: '700',
+  },
+  heroTitle: {
+    color: '#f8fafc',
+    fontSize: 28,
+    fontWeight: '800',
+    marginBottom: 18,
+  },
+  matchRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    marginBottom: 12,
+  },
+  teamBadge: {
+    alignItems: 'center',
+    flex: 1,
+  },
+  teamIcon: {
+    fontSize: 30,
+    marginBottom: 8,
+  },
+  teamName: {
+    color: '#e2e8f0',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  scoreWrap: {
+    flex: 1.2,
+    alignItems: 'center',
+  },
+  score: {
+    color: '#f8fafc',
+    fontSize: 30,
+    fontWeight: '800',
+  },
+  subtitle: {
+    color: '#94a3b8',
+    fontSize: 12,
+    marginTop: 2,
+  },
+  metaRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    marginTop: 8,
+  },
+  metaText: {
+    color: '#cbd5e1',
+    fontSize: 12,
+  },
+  summaryRow: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'space-between',
+    marginTop: 18,
+    marginBottom: 14,
+    gap: 8,
+  },
+  summaryCard: {
+    backgroundColor: '#111827',
+    borderRadius: 16,
+    paddingHorizontal: 12,
+    paddingVertical: 14,
+    width: '48%',
+    borderWidth: 1,
+    borderColor: '#1f2937',
+  },
+  summaryLabel: {
+    color: '#94a3b8',
+    fontSize: 11,
+    marginBottom: 8,
+    textTransform: 'uppercase',
+  },
+  summaryValue: {
+    color: '#f8fafc',
+    fontSize: 20,
+    fontWeight: '700',
+  },
+  section: {
+    marginTop: 12,
+    marginBottom: 18,
+  },
+  sectionTitle: {
+    color: '#f8fafc',
+    fontSize: 16,
+    fontWeight: '700',
+    marginBottom: 12,
+  },
+  fixtureCard: {
+    backgroundColor: '#111827',
+    borderRadius: 14,
+    padding: 14,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#1f2937',
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+  },
+  fixtureDay: {
+    color: '#60a5fa',
+    fontSize: 12,
+    fontWeight: '700',
+    width: 36,
+  },
+  fixtureBody: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'center',
+    flex: 1,
+    gap: 8,
+  },
+  fixtureTeam: {
+    color: '#f8fafc',
+    fontSize: 12,
+    fontWeight: '600',
+  },
+  fixtureVS: {
+    color: '#94a3b8',
+    fontSize: 11,
+  },
+  fixtureTime: {
+    color: '#cbd5e1',
+    fontSize: 12,
+    fontWeight: '700',
+  },
+  picksCard: {
+    backgroundColor: '#111827',
+    borderRadius: 14,
+    padding: 16,
+    borderWidth: 1,
+    borderColor: '#1f2937',
+  },
+  pickTitle: {
+    color: '#f8fafc',
+    fontSize: 15,
+    fontWeight: '700',
+    marginBottom: 4,
+  },
+  pickMeta: {
+    color: '#94a3b8',
+    fontSize: 12,
+  },
+  listRow: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    backgroundColor: '#111827',
+    borderRadius: 12,
+    paddingHorizontal: 14,
+    paddingVertical: 12,
+    marginBottom: 10,
+    borderWidth: 1,
+    borderColor: '#1f2937',
+  },
+  rank: {
+    width: 28,
+    color: '#60a5fa',
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  nameWrap: {
+    flex: 1,
+  },
+  listName: {
+    color: '#f8fafc',
+    fontSize: 14,
+    fontWeight: '600',
+  },
+  listSub: {
+    color: '#94a3b8',
+    fontSize: 11,
+    marginTop: 2,
+  },
+  goals: {
+    color: '#fbbf24',
+    fontSize: 14,
+    fontWeight: '700',
+  },
+  tabBar: {
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    alignItems: 'center',
+    backgroundColor: '#111827',
+    borderTopWidth: 1,
+    borderTopColor: '#1f2937',
+    paddingBottom: 18,
+    paddingTop: 10,
+  },
+  tabButton: {
+    flex: 1,
+    alignItems: 'center',
+    justifyContent: 'center',
+    paddingVertical: 8,
+  },
+  tabButtonActive: {
+    borderTopWidth: 2,
+    borderTopColor: '#60a5fa',
+  },
+  tabIcon: {
+    fontSize: 18,
+  },
+  tabLabel: {
+    color: '#94a3b8',
+    fontSize: 11,
+    marginTop: 4,
+    fontWeight: '600',
+  },
+  tabLabelActive: {
+    color: '#f8fafc',
+  },
+});
+
+export { App };
